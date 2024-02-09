@@ -1,0 +1,28 @@
+<h1>Guess the Number</h1>
+<input id="demo">
+<button onclick="funcheck()">check</button>
+<p id="result">Result</p>
+<p id="Score">Score:10</p>
+<script>
+
+    var demo=document.getElementById("demo")
+    var result=document.getElementById("result")
+    var x=Math.floor(Math.random()*10)+1 
+    var totalscore=10
+    function funcheck()
+    {
+        var enternumber=demo.value
+        if(enternumber==x)
+        {
+            result.textContent="Right"
+            alert("You Won.....!!!!")
+        }
+        else{
+            totalscore=totalscore-1
+            Score.textContent="Score:"+totalscore
+            result.textContent="Wrong"
+            alert("You Loss.....Please Try Again")
+        }
+        
+    }
+</script>
